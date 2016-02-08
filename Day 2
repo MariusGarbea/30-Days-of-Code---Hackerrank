@@ -1,0 +1,17 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    double M;
+    float T, X;
+    scanf("%lf%f%f", &M, &T, &X);
+    T = T*M/100;
+    X = X*M/100;
+    int n = (int)round(M+T+X);
+    printf("The final price of the meal is $%d.", n);
+    return 0;
+}
