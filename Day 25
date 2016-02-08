@@ -1,0 +1,33 @@
+//Prime number testing in O(sqrt(n))
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+string prim(const int &x){
+    if(x<2)
+        return "Not prime\n";
+    if(x == 2 or x == 3)
+        return "Prime\n";
+    if(x == 4)
+        return "Not prime\n";
+        for(size_t i = 2; i<sqrt(x); i++)
+        if(x%i == 0)
+            return "Not prime\n";
+    return "Prime\n";
+}
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int n;
+    cin >> n;
+    for(size_t i = 0; i<n; i++){
+        int x;
+        cin >> x;
+        cout << prim(x);
+    }
+    return 0;
+}
