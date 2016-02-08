@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string.h>
+#include <map>
+using namespace std;
+int main(){
+    map<string, int> nume;
+    int n, m;
+    unsigned int i;
+    string p;
+    cin >> n;
+    for(i = 0; i<n; i++){
+        cin.ignore(1000, '\n');
+        getline(cin, p);
+        cin >> m;
+        nume.insert(map<string, int>::value_type(p, m));
+    }
+    cin.ignore(); 
+    while(getline(cin, p)){
+        if(nume[p]!=0){
+            cout << p << "=" << nume[p] << endl;
+        }
+        else
+            printf("Not found\n");
+    }
+}
