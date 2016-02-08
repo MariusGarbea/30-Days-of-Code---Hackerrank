@@ -1,0 +1,17 @@
+//Generating test cases for the Angry Professor problem
+
+#include <cstdio>
+
+int main(){
+    printf("5\n");
+    printf("3 3\n");
+    printf("-1 0 1\n");
+    printf("4 3\n");
+    printf("-2 -1 0 2\n");
+    printf("5 3\n");
+    printf("-2 0 1 2 3\n");
+    printf("6 3\n");
+    printf("-3 -2 -1 0 1 2\n");
+    printf("7 3\n");
+    printf("-1 0 1 2 3 4 5\n");
+}
