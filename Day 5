@@ -1,0 +1,24 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int N, a, b, T, p;
+    scanf("%d", &T);
+    for (unsigned int i = 0; i<T; i++){
+        scanf("%d%d%d",&a,&b,&N);
+        p += a;
+        for(unsigned int j = 0; j<N; j++){
+            p += pow(2,j)*b;
+            printf("%d ", p);
+        }
+        printf("\n");
+        p = 0;
+    }
+    return 0;
+}
