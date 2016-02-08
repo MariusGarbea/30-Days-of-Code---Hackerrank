@@ -1,0 +1,20 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    printf("Primitive : Double\n");
+    printf("Primitive : Character\n");
+    printf("Primitive : Boolean\n");
+    printf("Primitive : Integer\n");
+    printf("Referenced : String\n");
+    printf("Primitive : Boolean\n");
+    printf("Primitive : Double\n");
+    printf("Primitive : Character\n");
+    printf("Referenced : String"); 
+    return 0;
+}
