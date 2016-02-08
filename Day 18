@@ -1,0 +1,75 @@
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <queue>
+#include <stack>
+#include <string>
+
+using namespace std;
+
+class Palindrome {
+    stack<char> _stack;
+    queue<char> _queue;
+    
+    public:
+        
+        void pushCharacter(char& c) {
+            _stack.push(c);
+        }
+    
+        void enqueueCharacter(char& c) {
+            _queue.push(c);
+        }
+    
+        char popCharacter() {
+            auto c = _stack.top();
+            _stack.pop();
+            return c;
+        }
+    
+        char dequeueCharacter() {
+            auto c = _queue.front();
+            _queue.pop();
+            return c;
+        }
+};
+int main() {
+    // read the string s.
+    string s;
+    getline(cin, s);
+    
+  	// create the Palindrome class object p.
+    Palindrome p;
+    
+    // push all the characters of string s to stack.
+    for (int i = 0; i < s.length(); i++) {
+        p.pushCharacter(s[i]);
+    }
+    
+    // enqueue all the characters of string s to queue.
+    for (int i = 0; i < s.length(); i++) {
+        p.enqueueCharacter(s[i]);
+    }
+    
+    bool f = true;
+    
+    // pop the top character from stack.
+    // dequeue the first character from queue.
+    // compare both the characters.
+    for (int i = 0; i < s.length(); i++) {
+        if (p.popCharacter() != p.dequeueCharacter()) {
+            f = false;
+            
+            break;
+        }
+    }
+    
+    // finally print whether string s is palindrome or not.
+    if (f) {
+        cout << "The word, " << s << ", is a palindrome.";
+    } else {
+        cout << "The word, " << s << ", is not a palindrome.";
+    }
+    
+    return 0;
+}
